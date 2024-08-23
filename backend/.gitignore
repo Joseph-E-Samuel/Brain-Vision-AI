@@ -10,6 +10,7 @@ __pycache__/
 *.pyd
 *.pyo
 
+
 # Django specific
 db.sqlite3
 *.sqlite3
@@ -38,6 +39,8 @@ VENV/
 # Ignore local settings
 brain_cancer_identification/settings_local.py
 brain_cancer_identification/settings/*
+
+Brain-Tumor-Detection/.ipynb_checkpoints/*
 
 # Node.js related
 node_modules/
