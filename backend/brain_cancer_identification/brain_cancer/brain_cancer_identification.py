@@ -6,13 +6,13 @@ def predict_with_model(image_path):
     # Load the model
     model_path = '../../Brain-Tumor-Detection/models/cnn-parameters-improvement-10-0.85.keras'
     print(f"Loading model from {model_path}...")
-    model = load_model(filepath='cnn-parameters-improvement-10-0.85.keras')
+    model = load_model(filepath='/Users/iniyan/workspace/Brain-Vision-AI/backend/brain_cancer_identification/brain_cancer/cnn-parameters-improvement-10-0.85.keras')
     print("Model loaded successfully.")
 
     # Function to prepare the image
     def prepare_image(image_path, target_size):
-        print(f"Loading image from {image_path}...")
-        image = cv2.imread(image_path)
+        print(f"Loading image from {image_path.name}...") 
+        image = cv2.imread('/Users/iniyan/workspace/Brain-Vision-AI/backend/brain_cancer_identification/brain_cancer/Y10.jpg')
         
         if image is None:
             print(f"Error: Image at {image_path} could not be loaded.")
@@ -46,7 +46,9 @@ def predict_with_model(image_path):
         
         # Convert probability to binary class
         predicted_class = np.where(prediction > 0.5, 1, 0)
-        
-        return predicted_class[0][0] # (1 for Tumor, 0 for No Tumor)
+        if(predicted_class[0][0]==1):
+            return 'tumor detected'
+        else:
+            return 'no tumor detected'
     else:
         return("Image preparation failed; skipping prediction.")

@@ -2,25 +2,31 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./index.css";
 import "./global.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/brain_cancer/images/")
-      .then((data) => console.log(data)) // Adjust how you handle the fetched data
-      .catch((error) => console.error("Error:", error));
-  }, []); // Empty dependency array means this runs once on mount
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
 
   // Handle button click to post data
-  const handleClick = () => {
-    fetch("/api/BrainCancerIdentification/", {
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    if (!selectedFile) {
+      alert("Please select a file first.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+    console.log("seelcted file: ", selectedFile);
+
+    fetch("http://127.0.0.1:8000/brain_cancer/images/", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ field1: "value1", field2: "value2" }), //replace values with actual things you want to insert
+      body: formData,
     })
-      .then((response) => response.json())
       .then((data) => console.log("Success:", data)) //adjust depending on how you want to handle the data
       .catch((error) => console.error("Error:", error));
   };
@@ -1931,9 +1937,9 @@ function App() {
                     <input
                       type="file"
                       name="file"
-                      onChange={handleFileChange}
                       className="form-control"
                       accept=".jpg"
+                      onChange={handleFileChange}
                     />
                     <button
                       type="submit"
