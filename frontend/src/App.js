@@ -4,6 +4,28 @@ import './index.css';
 import "./global.css"
 
 function App() {
+
+  useEffect(() => {
+    fetch('/api/BrainCancerIdentification/')
+      .then(response => response.json())
+      .then(data => console.log(data)) // Adjust how you handle the fetched data
+      .catch(error => console.error('Error:', error));
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Handle button click to post data
+  const handleClick = () => {
+    fetch('/api/BrainCancerIdentification/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ field1: 'value1', field2: 'value2' }), //replace values with actual things you want to insert
+    })
+      .then(response => response.json())
+      .then(data => console.log('Success:', data)) //adjust depending on how you want to handle the data
+      .catch(error => console.error('Error:', error));
+  };
+
   return (
     <div className="App">
 
@@ -1001,7 +1023,15 @@ function App() {
                     <div className="row justify-content-xl-center gh-1 gv-5 mb-n7">
                         <div className="col-12 col-lg-4 me-lg-auto me-xl-0 show-on-scroll" data-show-duration="900">
                             <h2 className="h3">The Testing Process:</h2>
-                            <a href="about-us-2.html" className="btn btn-dark btn-with-ball mt-30">Process</a>
+                            
+
+
+
+
+
+
+
+                            <button onClick={handleClick} className="btn btn-dark btn-with-ball mt-30">Process</button>
                         </div>
                         <div className="d-none d-xl-block col-1"></div>
                         <div className="col-12 col-lg-6 col-xl-5 show-on-scroll" data-show-delay="150" data-show-duration="900">
