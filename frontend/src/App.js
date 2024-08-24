@@ -1020,22 +1020,24 @@ function App() {
                     </svg>
                 </div>
                 <div className="container">
-                    <div className="row justify-content-xl-center gh-1 gv-5 mb-n7">
-                        <div className="col-12 col-lg-4 me-lg-auto me-xl-0 show-on-scroll" data-show-duration="900">
-                            <h2 className="h3">The Testing Process:</h2>
-                            
+                   <div className="row justify-content-xl-center gh-1 gv-5 mb-n7">
+                       <div className="col-12 col-lg-4 me-lg-auto me-xl-0 show-on-scroll" data-show-duration="900">
+                           <h2 className="h3">The Testing Process:</h2>
+                           <form onSubmit={handleClick} className="mt-30">
+                             <input
+                               type="file"
+                               name="file"
+                               onChange={handleFileChange}
+                               className="form-control"
+                               accept=".jpg"
+                             />
+                             <button type="submit" className="btn btn-dark btn-with-ball mt-30">Process File</button>
+                           </form>
 
-
-
-
-
-
-
-                            <button onClick={handleClick} className="btn btn-dark btn-with-ball mt-30">Process</button>
                         </div>
                         <div className="d-none d-xl-block col-1"></div>
                         <div className="col-12 col-lg-6 col-xl-5 show-on-scroll" data-show-delay="150" data-show-duration="900">
-                            <p className="lead fw-normal mt-n7 mb-30">Simply drag and drop your image into the black box and press the process button.</p>
+                            <p className="lead fw-normal mt-n7 mb-30">Simply drag and drop your image into the file box and press the process button.</p>
                             <p>Your image will be processed within a span of two to three seconds and your results will be shown below.</p>
                             <hr/>
                             <div className="row gh-2 gv-2 justify-content-around justify-content-sm-center text-center text-sm-start">
