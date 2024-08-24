@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include  # Import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('brain_cancer.urls')),  # Include your app's URLs
+    path('brain_cancer/', include('brain_cancer.urls')), 
 ]

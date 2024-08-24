@@ -1,6 +1,7 @@
+
 from django.urls import path
-from .views import BrainCancerIdentificationAPIView
+from .views import BrainImageListCreateView
 
 urlpatterns = [
-    path('api/BrainCancerIdentification/', MyModelAPIView.as_view(), name='BrainCancerIdentification-api'),
+    path('images/', BrainImageListCreateView.as_view(), name='brainimage-list-create'),
 ]

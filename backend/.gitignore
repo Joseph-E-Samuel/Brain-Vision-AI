@@ -42,6 +42,9 @@ brain_cancer_identification/settings/*
 
 Brain-Tumor-Detection/.ipynb_checkpoints/*
 
+brain_cancer_venv/*
+/Users/iniyan/workspace/Brain-Vision-AI/.venv/*
+
 # Node.js related
 node_modules/
 npm-debug.log
