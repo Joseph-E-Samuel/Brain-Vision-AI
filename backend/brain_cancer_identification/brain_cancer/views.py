@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import BrainCancerIdentification
 from django.http import JsonResponse, HttpResponseBadRequest
-from brain_cancer_identification import predict_with_model
+from .brain_cancer_identification import predict_with_model
 
 
 class BrainCancerIdentificationAPIView(APIView):

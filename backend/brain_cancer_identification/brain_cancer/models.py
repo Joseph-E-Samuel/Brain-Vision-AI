@@ -1,9 +1,8 @@
-
 from django.db import models
 
 class BrainCancerIdentification(models.Model):
-    field1 = models.CharField(max_length=100)
-    field2 = models.IntegerField()
+    image = models.ImageField(upload_to='brain_images/')  # Stores the image file
+    prediction = models.BooleanField()  # Stores the prediction as a boolean (True/False)
 
     def __str__(self):
-        return self.field1
+        return f"Image {self.id} - Prediction: {'Positive' if self.prediction else 'Negative'}"
