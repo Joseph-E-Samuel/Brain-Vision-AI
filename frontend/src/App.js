@@ -1789,7 +1789,7 @@ function App() {
                 className="background-video bg-dark jarallax"
                 data-jarallax-video="mp4:assets/images/demos/creative-branding-studio.mp4"
               >
-                <video controls >
+                <video syle={{width: '100%'}}>
                   <source src={video} type="video/mp4"/>
                 </video>
               </div>
