@@ -3,6 +3,10 @@ import "./App.css";
 import "./index.css";
 import "./global.css";
 import { useState, useEffect } from "react";
+import React, { Component } from 'react'
+import video from './assets/images/demos/creative-branding-studio.mp4'
+
+
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -1781,9 +1785,14 @@ function App() {
           <div className="pt-160 pb-100 position-relative">
             <div className="background">
               <div
+                                
                 className="background-video bg-dark jarallax"
                 data-jarallax-video="mp4:assets/images/demos/creative-branding-studio.mp4"
-              ></div>
+              >
+                <video controls >
+                  <source src={video} type="video/mp4"/>
+                </video>
+              </div>
               <div
                 className="background-color"
                 style={{
