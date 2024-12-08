@@ -1782,7 +1782,7 @@ function App() {
             <div className="background">
               <div
                 className="background-video bg-dark jarallax"
-                data-jarallax-video="mp4:assets/images/creative-branding-studio.mp4"
+                data-jarallax-video="mp4:assets/images/demos/creative-branding-studio.mp4"
               ></div>
               <div
                 className="background-color"
