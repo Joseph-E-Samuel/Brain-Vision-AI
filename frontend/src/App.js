@@ -1826,7 +1826,7 @@ function App() {
                 >
                   <div className="card card-portfolio card-horizontal card-image-md card-hover-frame text-white">
                     <a
-                      href="portfolio-single-style-4.html"
+                      href=""
                       className="card-img"
                     >
                       <img
@@ -1836,7 +1836,7 @@ function App() {
                     </a>
                     <div className="card-body">
                       <a
-                        href="portfolio-single-style-4.html"
+                        href=""
                         className="card-title h2"
                       >
                         Accessibility
@@ -1856,7 +1856,7 @@ function App() {
                 >
                   <div className="card card-portfolio card-horizontal card-swap card-image-md card-hover-frame text-white">
                     <a
-                      href="portfolio-single-style-5.html"
+                      href=""
                       className="card-img"
                     >
                       <img
@@ -1886,7 +1886,7 @@ function App() {
                 >
                   <div className="card card-portfolio card-horizontal card-image-md card-hover-frame text-white">
                     <a
-                      href="portfolio-single-style-2.html"
+                      href=""
                       className="card-img"
                     >
                       <img
@@ -1896,7 +1896,7 @@ function App() {
                     </a>
                     <div className="card-body">
                       <a
-                        href="portfolio-single-style-2.html"
+                        href=""
                         className="card-title h2"
                       >
                         Incentivization
