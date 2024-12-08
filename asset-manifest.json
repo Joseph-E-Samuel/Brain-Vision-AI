@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Brain-Vision-AI/static/css/main.4645af47.css",
-    "main.js": "/Brain-Vision-AI/static/js/main.d8296bab.js",
+    "main.js": "/Brain-Vision-AI/static/js/main.2cb3df2a.js",
     "static/js/453.f7f49a01.chunk.js": "/Brain-Vision-AI/static/js/453.f7f49a01.chunk.js",
     "static/media/creative-branding-studio.mp4": "/Brain-Vision-AI/static/media/creative-branding-studio.fa87821118208e7dd2d5.mp4",
     "static/media/logo.svg": "/Brain-Vision-AI/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Brain-Vision-AI/index.html",
     "main.4645af47.css.map": "/Brain-Vision-AI/static/css/main.4645af47.css.map",
-    "main.d8296bab.js.map": "/Brain-Vision-AI/static/js/main.d8296bab.js.map",
+    "main.2cb3df2a.js.map": "/Brain-Vision-AI/static/js/main.2cb3df2a.js.map",
     "453.f7f49a01.chunk.js.map": "/Brain-Vision-AI/static/js/453.f7f49a01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4645af47.css",
-    "static/js/main.d8296bab.js"
+    "static/js/main.2cb3df2a.js"
   ]
 }
